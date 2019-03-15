@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <p>An simple example with NgRX</p>
+  <div class="btn-container">
+    <button *ngIf="!isLoading"class="btn btn-primary" type="button" (click)="getLoad()">
+      Click please
+    </button>
+    <button *ngIf="isLoading" class="btn btn-primary" type="button" (click)="getUnload()">
+      Unclick please
+    </button>
+  </div>
+  <div class="spinner-container">
+    <mat-progress-spinner *ngIf="isLoading" [mode]="mode" [value]="value"></mat-progress-spinner>
+  </div>
+</div>

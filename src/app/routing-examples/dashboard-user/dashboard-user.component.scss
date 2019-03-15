@@ -1,0 +1,34 @@
+.main-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.input-container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 15px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.products-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px red dotted;
+}

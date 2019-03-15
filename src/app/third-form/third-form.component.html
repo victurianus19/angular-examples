@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Third Form</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+
+    <div class="form-container">
+      <label for="thirdInput">Third Input Validations</label>
+      
+      <div class="input-message-container" [class.error]="!inputThird.valid && inputThird.touched">
+        <input class="third-input" type="text" id="thirdInput" placeholder="Write" [formControl]="inputThird">
+        <div *ngIf="!inputThird.valid" class="text-invalid">Value is invalid</div>
+        <div *ngIf="inputThird.hasError('required')" class="text-invalid">Value is invalid</div>
+        <div *ngIf="inputThird.hasError('invalidInputThird')" class="text-invalid">Value must begin with al</div>
+        <div *ngIf="!myForm.valid" class="text-invalid">Form is invalid</div>
+      </div>
+      
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>

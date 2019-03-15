@@ -1,0 +1,11 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Second Request</h2>
+
+  <div class="btn-container">
+    <button class="btn btn-primary" type="button" (click)="makeRequest()">Make Request</button>
+  </div>
+  <div *ngIf="loading">loading...</div>
+  <pre>{{data | json}}</pre>
+  <h3>Request time: {{msgs}}</h3>
+</div>

@@ -1,0 +1,21 @@
+<div class="main-container">
+  <h2>
+    Choose an example:
+  </h2>
+
+  <div class="btn-container">
+    <button class="btn btn-primary" (click)="firstObservable()">First Observable Example</button>
+    <button class="btn btn-primary" (click)="secondObservable()">Second Observable Example</button>
+    <button id="b" class="btn btn-primary" (click)="btnFirstObservableRxJS()">
+      First Observable RxJS Example</button>
+    <button id="b2" class="btn btn-primary" (click)="btnSecondObservableRxJS()">
+      Second Observable RxJS Example</button>
+    <button id="b3" class="btn btn-primary" (click)="btnThirdObservableRxJS()">
+      Third Observable RxJS Example</button>
+  </div>
+
+  <div *ngIf="isPressBtnSimpleEx || isPressBtnSecondEx || isPressBtnRxJSEx || isPressBtnRxJSEx2 || isPressBtnRxJSEx3">
+    <h4>{{ sTextHeader }}</h4>
+    <div *ngFor="let value of values">{{ value }}</div>
+  </div>
+</div>

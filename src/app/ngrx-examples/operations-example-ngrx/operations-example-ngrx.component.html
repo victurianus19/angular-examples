@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Features of NgRx</h2>
+  <h5>Attributes of the users:</h5>
+  <div *ngFor="let num of total; let i = index">
+    <div>Total {{ num1[i] }} + {{ num2[i] }} = {{ num }}</div>
+  </div>
+  <div class="btn-container">
+      <button class="btn btn-primary" type="submit" (click)="onClickSelectorMemoized()">Calculate</button>
+  </div>
+
+  <h5>Attributes of the users:</h5>
+  <div *ngIf="isUser">loading...</div>
+  <pre>User: {{ userRedux | json }}</pre>
+  <div class="btn-container">
+    <button class="btn btn-primary" type="submit" (click)="onClickEffect()">Effect example</button>
+  </div>
+
+  <h5>List of Users using Entity State:</h5>
+  <div *ngFor="let user of userList; let i = index">
+      <div>Id: {{ user.id }} - Name: {{ user.name }}</div>
+  </div>
+  <div class="btn-container">
+    <button class="btn btn-primary" type="submit" (click)="onClickEntity()">Entity example</button>
+  </div>
+</div>

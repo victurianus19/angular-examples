@@ -1,0 +1,89 @@
+<mat-toolbar color="primary" class="example-toolbar">
+    <button mat-button class="menu-initial-name" (click)="goToInitialPage()">Ng-Book Examples</button>
+    <button mat-button [matMenuTriggerFor]="menuNgBook">Forms</button>
+    <button mat-button [matMenuTriggerFor]="menuDINgBook">Dependency Injection</button>
+    <button mat-button [matMenuTriggerFor]="menuHttpNgBook">Http</button>
+    <button mat-button [matMenuTriggerFor]="menuRoutingNgBook">Routing</button>
+    <button mat-button [matMenuTriggerFor]="menuObsRxjsNgBook">ObsRxJS</button>
+    <button mat-button [matMenuTriggerFor]="menuObsNgrxNgBook">NgRX</button>
+</mat-toolbar>
+
+
+
+<mat-menu #menuNgBook="matMenu">
+  <button mat-menu-item (click)="goToFirstForm()">First Form</button>
+  <button mat-menu-item (click)="goToSecondForm()">Second Form</button>
+  <button mat-menu-item (click)="goToThirdForm()">Third Form</button>
+  <button mat-menu-item (click)="goToFourthForm()">Fourth Form</button>
+  <button mat-menu-item (click)="goToBigForm()">Fifth Form</button>
+  <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+</mat-menu>
+
+<mat-menu #menuDINgBook="matMenu">
+    <button mat-menu-item (click)="goToFirstDI()">First DI</button>
+    <button mat-menu-item (click)="goToSecondDIFactory()">Second DI</button>
+    <!-- <button mat-menu-item (click)="goToSecondForm()">Second Form</button>
+    <button mat-menu-item (click)="goToThirdForm()">Third Form</button>
+    <button mat-menu-item (click)="goToFourthForm()">Fourth Form</button>
+    <button mat-menu-item (click)="goToBigForm()">Fifth Form</button> -->
+    <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+</mat-menu>
+<mat-menu #menuHttpNgBook="matMenu">
+    <button mat-menu-item (click)="goToFirstHttpExample()">First http example</button>
+    <button mat-menu-item (click)="goToSecondHttpExample()">Second http example</button>
+</mat-menu>
+<mat-menu #menuRoutingNgBook="matMenu">
+    <button mat-menu-item (click)="goToFirstRoutingExample()">First routing example</button>
+    <button mat-menu-item (click)="goToSecondRoutingExample()">Second routing example</button>
+    <button mat-menu-item (click)="goToDashBoardUserRoutingExample()">Third routing example</button>
+</mat-menu>
+<mat-menu #menuObsRxjsNgBook="matMenu">
+    <button mat-menu-item (click)="goToSimpleObsRxjsExample()">Simple Observable examples</button>
+    <button mat-menu-item (click)="goToSecondObsRxjsExample()">Advanced Observable examples</button>
+</mat-menu>
+<mat-menu #menuObsNgrxNgBook="matMenu">
+    <button mat-menu-item (click)="goToSimpleNgRXExample()">Simple NgRX example</button>
+    <button mat-menu-item (click)="goToSearchBookNgRXExample()">Search Books NgRX example</button>
+    <button mat-menu-item (click)="goToOperationNgRXExample()">Operations NgRX example</button>
+</mat-menu>
+
+<!-- <mat-menu #simpleForm="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu> -->
+
+<!-- <mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu> -->

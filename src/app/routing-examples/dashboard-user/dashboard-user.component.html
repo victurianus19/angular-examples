@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <p>
+    You are logged!
+  </p>
+  <h2>Products</h2>
+
+  <a [routerLink]="['./view-product']">Home Product</a>
+  <div class="navLinks">
+    <h6>Enter id:</h6>
+    <div class="input-container">
+      <input #id placeholder="Product number">
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-primary" type="button" (click)="goToProduct(id.value)">Go</button>
+    </div>
+  </div>
+
+  <div class="products-container">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <div class="btn-container">
+    <button class="btn btn-primary" type="button" (click)="logOut()">Log out</button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Search of Books</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value.emailInput)">
+
+    <div class="form-container">
+      <label for="thirdInput">Introduce the email of an user</label>
+      <div class="input-message-container">
+        <div class="input-container" [class.error]="!emailInput.valid && emailInput.touched">
+          <input type="text" id="emailInput" placeholder="Email" [formControl]="emailInput">
+          <div *ngIf="!emailInput.valid" class="text-invalid">Email is not valid</div>
+          <div *ngIf="emailInput.hasError('required')" class="text-invalid">Email is mandatory</div>
+        </div>
+      </div>
+      <div *ngFor="let book of bookList">
+        <div>Title: {{book.name}}</div>
+        <div>Email: {{book.userEmail}}</div>
+      </div>
+    </div>
+    <div class="btn-container" [class.error]="!myForm.valid">
+      <button [disabled]="!myForm.valid" class="btn btn-primary" type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>

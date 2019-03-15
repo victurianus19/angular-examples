@@ -1,0 +1,51 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Fifth Form</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+
+    <div class="form-container">
+      <label for="thirdInput">Fifth Input Validations</label>
+      <div class="input-message-container">
+        <div class="input-container" [class.error]="!nameInput.valid && nameInput.touched">
+          <input type="text" id="nameInput" placeholder="Name" [formControl]="nameInput">
+          <div *ngIf="!nameInput.valid" class="text-invalid">Name is not valid</div>
+          <div *ngIf="nameInput.hasError('required')" class="text-invalid">Name is mandatory</div>
+        </div>
+        <div class="input-container" [class.error]="!surNameInput.valid && surNameInput.touched">
+          <input type="text" id="surNameInput" placeholder="Surname" [formControl]="surNameInput">
+          <div *ngIf="!surNameInput.valid" class="text-invalid">Surname is not valid</div>
+          <div *ngIf="surNameInput.hasError('required')" class="text-invalid">Surname is mandatory</div>
+        </div>
+        <div class="input-container" [class.error]="!emailInput.valid && emailInput.touched">
+          <input type="text" id="emailInput" placeholder="Email" [formControl]="emailInput">
+          <div *ngIf="!emailInput.valid" class="text-invalid">Email is not valid</div>
+          <div *ngIf="emailInput.hasError('required')" class="text-invalid">Email is mandatory</div>
+        </div>
+        <div class="input-container" [class.error]="!passwordInput.valid && passwordInput.touched">
+          <div class="input-container-password">
+            <input type={{sType}} id="passwordInput" placeholder="Password" [formControl]="passwordInput">
+            <div class="img-container" (click)="showHideTextInput()" (touchstart)="showHideTextInput()" (touchEnd)="showHideTextInput()">
+              <img src="assets/img/eyeIcon.png">
+            </div>
+          </div>
+          <div *ngIf="!passwordInput.valid" class="text-invalid">Password is not valid, must start with
+            an uppercase character and length between 6 and 12 characters</div>
+          <div *ngIf="passwordInput.hasError('required')" class="text-invalid">Password is mandatory</div>
+        </div>
+        <div class="input-container" [class.error]="!passwordConfirmInput.valid && passwordConfirmInput.touched">
+            <div class="input-container-password">
+              <input type="password" id="passwordConfirmInput" placeholder="Confirm Password" [formControl]="passwordConfirmInput">
+            </div>
+            <div *ngIf="!passwordConfirmInput.valid" class="text-invalid">Password is not valid, must start with
+              an uppercase character and length between 6 and 12 characters</div>
+            <div *ngIf="passwordConfirmInput.hasError('required')" class="text-invalid">Password is mandatory</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container" [class.error]="!myForm.valid">
+        <button [disabled]="!myForm.valid" class="btn btn-primary" type="submit">Submit</button>
+        <div *ngIf="(passwordInput.value!==passwordConfirmInput.value)" class="text-invalid">Passwords do not match</div>
+      </div>
+
+  </form>
+</div>

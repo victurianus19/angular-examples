@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>First Form</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  
+    <div class="text-input-container">
+      <label for="simpleInput">Simple Input</label>
+      <input class="first-input" type="text" id="simpleInput" 
+        placeholder="Write" name="simpleInput" ngModel>
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

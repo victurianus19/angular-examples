@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Fourth Form</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+
+    <div class="form-container">
+      <label for="fourthInput">Fourth Input Two-way data binding</label>
+      
+      <div class="input-message-container">
+        <input class="fourth-input" type="text" id="fourthInput" placeholder="Write" 
+          [formControl]="myForm.get('productName')" [(ngModel)]="productName">
+      </div>
+      
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    
+    <div>The Product name is: {{productName}}</div>
+    
+  </form>
+</div>

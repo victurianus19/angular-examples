@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="main-container">
+  <h2>Second Form</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+  
+    <div class="text-input-container">
+      <label for="secondInput">Second Simple Input</label>
+      <input class="second-input" type="text" id="secondSimpleInput" 
+        placeholder="Write" [formControl]="myForm.controls['inputSecond']">
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
