@@ -1,4 +1,4 @@
-# App with a lot of examples about ANGULAR/REACT/RXJS
+# App with a lot of examples about ANGULAR/REDUX/RXJS
 You can see a lot of examples with Angular using the RxJS library, Redux, etc.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
